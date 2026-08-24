@@ -4,7 +4,6 @@ import { supabase } from '@/lib/supabase';
 import { Profile, UserRole, Language } from '@/lib/types';
 import { t as translate } from '@/lib/i18n';
 import { detectLocation } from '@/lib/utils';
-import { ensureNfcIdentity } from '@/lib/nfc';
 
 interface AuthContextType {
   session: Session | null;
@@ -56,15 +55,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         return;
       }
       setProfile(newProfile as Profile | null);
-      if ((newProfile as any)?.active_role === 'farmer' || (newProfile as any)?.role === 'farmer') {
-        ensureNfcIdentity(uid).catch(() => {});
-      }
       return;
     }
     setProfile(data as Profile | null);
-    if ((data as any)?.active_role === 'farmer' || (data as any)?.role === 'farmer') {
-      ensureNfcIdentity(uid).catch(() => {});
-    }
   }, []);
 
   useEffect(() => {

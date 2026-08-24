@@ -28,8 +28,6 @@ export function getNavGroups(t: (key: string) => string): NavGroup[] {
         { key: 'bulkBuying', icon: <NavIcon path="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />, roles: ['farmer', 'champion'] },
         { key: 'machinery', icon: <NavIcon path="M7 7h.01M7 3h5a1.99 1.99 0 011.75 1.05L17 10l-2 2-3-3v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h3z" />, roles: ['farmer', 'champion'] },
         { key: 'harvest', icon: <NavIcon path="M12 2v6m0 0l3-3m-3 3L9 5m3 1v14m-7-7H5m14 0h-1" />, roles: ['farmer', 'champion'] },
-        { key: 'nfcIdentity', icon: <NavIcon path="M12 2a3 3 0 00-3 3v1a3 3 0 000 6v1a3 3 0 006 0v-1a3 3 0 000-6V5a3 3 0 00-3-3z M12 8v8 M8 12h8" />, roles: ['farmer', 'champion', 'buyer'] },
-        { key: 'nfcHarvest', icon: <NavIcon path="M12 2a3 3 0 00-3 3v1a3 3 0 000 6v1a3 3 0 006 0v-1a3 3 0 000-6V5a3 3 0 00-3-3z M12 8v8 M8 12h8" />, roles: ['farmer', 'champion', 'buyer'] },
       ],
     },
     {

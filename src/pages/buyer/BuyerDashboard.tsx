@@ -7,7 +7,7 @@ import { CardSpinner } from '@/components/ui/Spinner';
 import { EmptyState, ErrorState } from '@/components/ui/EmptyState';
 import { formatCurrency, formatDate } from '@/lib/utils';
 import { addRewardPoints, createNotification } from '@/lib/hooks';
-import { ShoppingBag, Package, IndianRupee, TrendingUp, Plus, Search, Check, X, Truck, ScanLine } from 'lucide-react';
+import { ShoppingBag, Package, IndianRupee, TrendingUp, Plus, Search, Check, X, Truck } from 'lucide-react';
 
 export default function BuyerDashboard() {
   const { profile, t } = useAuth();
@@ -101,12 +101,7 @@ export default function BuyerDashboard() {
             <h1 className="text-2xl font-bold">Buyer Dashboard</h1>
             <p className="text-primary-100 mt-1">{profile?.full_name} · Source crops directly from farmers</p>
           </div>
-          <button
-            onClick={() => { window.location.hash = '/nfcHarvest'; }}
-            className="bg-white/20 hover:bg-white/30 transition-colors rounded-xl px-4 py-2.5 flex items-center gap-2 text-sm font-semibold"
-          >
-            <ScanLine size={18} /> Scan Harvest NFC
-          </button>
+
         </div>
       </div>
 
